@@ -21,13 +21,13 @@ class DatabaseSeeder extends Seeder
             'name'=> 'Test User Doe',
             'email'=> 'test@example.com'
         ]);
-        
+
         $categories = ['Technology', 'Health', 'Science', 'Sports', 'Politics', 'Entertainment'];
 
         foreach ($categories as $category) {
             Category::create(['name'=>$category]);
         }
 
-        Post::factory()->count(10)->create();
+        Post::factory()->count(100)->create();
     }
 }
